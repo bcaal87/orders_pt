@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bcaalorderspt 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bcaalorderspt
+  template:
+    metadata:
+      labels:
+        app: bcaalorderspt 
+    spec:
+      containers:
+        - name: bcaalorderspt 
+          image: bcaal.azurecr.io/bcaalorderspt
+          ports:
+          - containerPort: 80
