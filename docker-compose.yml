@@ -102,7 +102,7 @@ services:
       - jaeger
     entrypoint: ["./wait.sh", "30", "dotnet", "Payment.API.dll"]
     environment:
-      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_ENVIRONMENT: Development
       RabbitMq__Hostname: rabbitmq
       RabbitMq__QueueName: history
       RabbitMq__QueueName2: messages
